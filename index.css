@@ -102,6 +102,8 @@ header{
     }
     .main-text{
         text-align: center;
+        font-weight: bold;
+        text-shadow: 0 5px black;
     }
     .background{
         bottom: 0;
