@@ -68,3 +68,61 @@ header{
     bottom: 5%;
     width: 30em;
 }
+
+@media screen and (max-width: 800px) {
+
+    body{
+        grid-template-columns: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+    header{
+        width: 100vw;
+        height: 14vh;
+        grid-template-columns: 25% 75%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .logo{
+        width: 100px;
+    }
+    .right{
+        height: 86vh;
+    }
+
+    .logo-title{
+        font-size: 2em;
+    }
+    .right-container{
+        width: 80%;
+        height: 100%;
+        margin-top: 10em;
+    }
+    .main-text{
+        text-align: center;
+    }
+    .background{
+        bottom: 0;
+        width: 30em;
+        height: 30em;
+    }
+    .contact-container{
+        font-family: arial;
+        background: rgba(0, 0, 0, 0.5);
+        width: 90%;
+        font-size: 20px;
+        height: 10em;
+        padding: 1em;
+        margin-top: 5em;
+        position: absolute;
+        bottom: 0;
+        line-height: 1.5;
+        left: 0;
+    }
+    h3{
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}
