@@ -8654,56 +8654,46 @@ del {
   padding-left: 45px;
 }
 
-/* line 1035, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .form-select .nice-select .list .option.selected {
   color: #142240;
   background: transparent;
 }
 
-/* line 1039, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .form-select .nice-select .list .option:hover {
   color: #142240;
   background: transparent;
 }
 
-/* line 1046, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .form-select .current {
   margin-right: 50px;
   font-weight: 300;
 }
 
-/* line 1050, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .form-select .nice-select::after {
   right: 20px;
 }
 
-/* line 1054, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .mt-10 {
   margin-top: 10px;
 }
 
-/* line 1057, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .section-top-border {
   padding: 50px 0;
   border-top: 1px dotted #eee;
 }
 
-/* line 1061, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .mb-30 {
   margin-bottom: 30px;
 }
 
-/* line 1064, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .mt-30 {
   margin-top: 30px;
 }
 
-/* line 1067, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_elements.scss */
 .switch-wrap {
   margin-bottom: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
 
 
 .logo>a>img{
@@ -8778,7 +8768,6 @@ del {
 }
 
 @media (max-width: 991px) {
-  /* line 182, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
   .form-container{
     display: block;
   }
@@ -8788,8 +8777,6 @@ del {
   height: 22em !important;
 }
 
-
-
 .team-item:hover .team-social {
   left: 0;
 }
@@ -8798,21 +8785,22 @@ del {
   width: 98vw;
   overflow-x: hidden;
 }
+
 .team-container{
   width: 100vw !important;
-  height: 110vh !important;
+  height: auto;
   margin: 0 !important;
-padding: 0;
-display: grid;
-grid-template-rows: 50% 50%;
-margin-bottom: 10em !important;
-gap: 5em ;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
+  margin-bottom:0em !important;
 }
 
 .team-row{
   display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-content: center;
+  margin-bottom: 7em;
 }
 
 .team-item{
@@ -8820,19 +8808,16 @@ gap: 5em ;
   height: 100%;
   display: grid;
   place-items: center;
- 
 }
 
 .team-image{
   width: 15em;
- 
   height: 20em;
 }
 
 .team-text{
   width: 15em;
   padding-top: 9px;
-  
 }
 
 .team-title{
@@ -8887,19 +8872,23 @@ gap: 5em ;
 @media (max-width: 900px) {
   .team-container{
     display: block;
-    height: 150em !important;
+    height: auto !important;
     overflow: hidden;
-
   }
+
   .team-row{
     display: block;
-    height: 75em;
+    height: 90em;
     overflow: hidden;
-
+    margin-bottom: 0;
   }
-  .team-item{
-    height: 25em;
-    overflow: hidden;
 
+  .team-item{
+    height: 30em;
+    overflow: hidden;
+  }
+
+  .last{
+    height: 30em !important;
   }
 }
