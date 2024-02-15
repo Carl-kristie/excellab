@@ -8841,7 +8841,7 @@ del {
 
 .team-about>img{
   height: 30em;
-  width: 20em !important;
+  width: 100% !important;
 }
 
 .absolute{
