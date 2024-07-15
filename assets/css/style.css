@@ -8841,7 +8841,6 @@ del {
 
 .team-about>img{
   height: 30em;
-  width: 100% !important;
 }
 
 .absolute{
@@ -8875,6 +8874,10 @@ del {
     height: auto !important;
     overflow: hidden;
   }
+  .team-about>img{
+  height: 30em;
+  width: 100% !important;
+}
 
   .team-row{
     display: block;
