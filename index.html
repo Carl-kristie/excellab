@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Excella Home</title>
-    <meta name="description" content="">
+    <meta name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/excella.png">
@@ -49,8 +49,8 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>     
-                                        <li><i class="fas fa-phone"></i>+2348037091874</li>
-                                        <li><i class="far fa-envelope"></i>info@excellauenergy.com</li>
+                                        <li><i class="fas fa-phone"></i><span data-site="phone">+2348037091874</span></li>
+                                        <li><i class="far fa-envelope"></i><span data-site="email">info@excellauenergy.com</span></li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -67,7 +67,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/excella.png" alt="">Excella <br> U <br> Energy</a>
+                                    <a href="index.html"><img data-site="logo" src="assets/img/logo/excella.png" alt=""><span data-site="companyName">Excella <br> U <br> Energy</span></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-8 right">
@@ -75,7 +75,7 @@
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
-                                            <ul id="navigation">                                                                                          
+                                            <ul id="navigation" data-site="navigation">                                                                                          
                                                 <li class="active"><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About us</a></li>
                                                 <li><a href="services.html">Services</a></li>
@@ -249,30 +249,29 @@
             <div class="row g-5">
                 <div class="col-lg-6 col-md-6">
                     <h5 class="text-white  mb-4">Contact</h5>
-                    <p class="mb-2 btn-light-white"><i class="fa fa-envelope me-3"></i> Info@excellauenergy.com</p>
-                    <p class="mb-2 btn-light-white"><i class="fa fa-envelope me-3"></i> excellauenergy@gmail.com</p>
-                    <p class="mb-2 btn-light-white"><i class="fa fa-map-marker-alt me-3"></i> Cyrus Excel Estate 
+                    <div data-site="emails">
+                        <p class="mb-2 btn-light-white"><i class="fa fa-envelope me-3"></i> Info@excellauenergy.com</p>
+                        <p class="mb-2 btn-light-white"><i class="fa fa-envelope me-3"></i> excellauenergy@gmail.com</p>
+                    </div>
+                    <p class="mb-2 btn-light-white" data-site="address"><i class="fa fa-map-marker-alt me-3"></i> Cyrus Excel Estate 
 Plot 963 R.I Uzoma street Wuye Abuja</p>
-                    <p class="mb-2 btn-light-white"><i class="fa fa-phone me-3"></i> +2348037091874</p>
-                    <p class="mb-2 btn-light-white"><i class="fa fa-phone me-3"></i> 07080903454</p>
-                    <div class="d-flex pt-3">
-                        <!-- <a class="btn1 btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn1 btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn1 btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn1 btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a> -->
+                    <div data-site="phones">
+                        <p class="mb-2 btn-light-white"><i class="fa fa-phone me-3"></i> +2348037091874</p>
+                        <p class="mb-2 btn-light-white"><i class="fa fa-phone me-3"></i> 07080903454</p>
+                    </div>
+                    <div class="d-flex pt-3" data-site="socialMedia">
+                        <!-- Social media links will be populated from Sanity -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Navigation</h5>
-                    <a class="btn1 btn-link" href="/index.html">Home</a>
-                <a class="btn1 btn-link" href="/team.html">Our Team</a>
-                    <a class="btn1 btn-link" href="/services.html">Our Services</a>
-                    <a class="btn1 btn-link" href="/about.html">About Us</a>
-                    <a class="btn1 btn-link" href="/contact.html">Contact Us</a>
+                    <div data-site="footerNavigation">
+                        <a class="btn1 btn-link" href="/index.html">Home</a>
+                        <a class="btn1 btn-link" href="/team.html">Our Team</a>
+                        <a class="btn1 btn-link" href="/services.html">Our Services</a>
+                        <a class="btn1 btn-link" href="/about.html">About Us</a>
+                        <a class="btn1 btn-link" href="/contact.html">Contact Us</a>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     
@@ -289,8 +288,8 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
                 <div class="footer-border">
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-xl-9 col-lg-8">
-                            <div class="footer-copy-right"></p>
-                                <p>Copyright ©2025 All rights reserved</p>
+                            <div class="footer-copy-right">
+                                <p data-site="copyright">Copyright ©2025 All rights reserved</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4">
@@ -368,6 +367,227 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
 
   const slug = document.body.getAttribute("data-slug") || inferSlugFromPath();
 
+  // Load site settings for header and footer
+  async function loadSiteSettings() {
+    const query = `*[_type=="siteSettings"][0]{
+      title,
+      header{
+        "logoUrl": logo.asset->url,
+        companyName,
+        phone,
+        email,
+        navigation[]{
+          title,
+          url,
+          isActive
+        }
+      },
+      footer{
+        contactInfo{
+          emails,
+          phones,
+          address
+        },
+        navigationLinks[]{
+          title,
+          url
+        },
+        socialMedia[]{
+          platform,
+          url
+        },
+        copyrightText
+      },
+      seo{
+        defaultTitle,
+        defaultDescription,
+        "faviconUrl": favicon.asset->url
+      }
+    }`;
+
+    try {
+      return await client.fetch(query);
+    } catch (error) {
+      console.error('Error fetching site settings:', error);
+      return null;
+    }
+  }
+
+  // Apply site settings to page
+  function applySiteSettings(settings) {
+    if (!settings) return;
+
+    // Apply header content
+    if (settings.header) {
+      const { header } = settings;
+
+      // Update logo
+      if (header.logoUrl) {
+        document.querySelectorAll('[data-site="logo"]').forEach(img => {
+          img.src = header.logoUrl;
+          img.alt = header.companyName || 'Company Logo';
+        });
+      }
+
+      // Update company name
+      if (header.companyName) {
+        document.querySelectorAll('[data-site="companyName"]').forEach(el => {
+          el.innerHTML = header.companyName.replace(/\s/g, '<br>');
+        });
+      }
+
+      // Update phone number
+      if (header.phone) {
+        document.querySelectorAll('[data-site="phone"]').forEach(el => {
+          el.textContent = header.phone;
+        });
+      }
+
+      // Update email
+      if (header.email) {
+        document.querySelectorAll('[data-site="email"]').forEach(el => {
+          el.textContent = header.email;
+        });
+      }
+
+      // Update navigation
+      if (header.navigation && header.navigation.length > 0) {
+        const navContainer = document.querySelector('[data-site="navigation"]');
+        if (navContainer) {
+          navContainer.innerHTML = '';
+          header.navigation.forEach(item => {
+            const li = document.createElement('li');
+            if (item.isActive) li.classList.add('active');
+            
+            const a = document.createElement('a');
+            a.href = item.url;
+            a.textContent = item.title;
+            
+            li.appendChild(a);
+            navContainer.appendChild(li);
+          });
+        }
+      }
+    }
+
+    // Apply footer content
+    if (settings.footer) {
+      const { footer } = settings;
+
+      // Update contact emails
+      if (footer.contactInfo?.emails) {
+        const emailContainer = document.querySelector('[data-site="emails"]');
+        if (emailContainer) {
+          emailContainer.innerHTML = '';
+          footer.contactInfo.emails.forEach(email => {
+            const p = document.createElement('p');
+            p.className = 'mb-2 btn-light-white';
+            p.innerHTML = `<i class="fa fa-envelope me-3"></i> ${email}`;
+            emailContainer.appendChild(p);
+          });
+        }
+      }
+
+      // Update contact phones
+      if (footer.contactInfo?.phones) {
+        const phoneContainer = document.querySelector('[data-site="phones"]');
+        if (phoneContainer) {
+          phoneContainer.innerHTML = '';
+          footer.contactInfo.phones.forEach(phone => {
+            const p = document.createElement('p');
+            p.className = 'mb-2 btn-light-white';
+            p.innerHTML = `<i class="fa fa-phone me-3"></i> ${phone}`;
+            phoneContainer.appendChild(p);
+          });
+        }
+      }
+
+      // Update address
+      if (footer.contactInfo?.address) {
+        document.querySelectorAll('[data-site="address"]').forEach(el => {
+          el.innerHTML = `<i class="fa fa-map-marker-alt me-3"></i> ${footer.contactInfo.address}`;
+        });
+      }
+
+      // Update footer navigation
+      if (footer.navigationLinks) {
+        const footerNavContainer = document.querySelector('[data-site="footerNavigation"]');
+        if (footerNavContainer) {
+          footerNavContainer.innerHTML = '';
+          footer.navigationLinks.forEach(link => {
+            const a = document.createElement('a');
+            a.className = 'btn1 btn-link';
+            a.href = link.url;
+            a.textContent = link.title;
+            footerNavContainer.appendChild(a);
+          });
+        }
+      }
+
+      // Update social media links
+      if (footer.socialMedia && footer.socialMedia.length > 0) {
+        const socialContainer = document.querySelector('[data-site="socialMedia"]');
+        if (socialContainer) {
+          socialContainer.innerHTML = '';
+          footer.socialMedia.forEach(social => {
+            const iconMap = {
+              facebook: 'fab fa-facebook-f',
+              twitter: 'fab fa-twitter',
+              linkedin: 'fab fa-linkedin-in',
+              youtube: 'fab fa-youtube',
+              instagram: 'fab fa-instagram'
+            };
+            
+            const a = document.createElement('a');
+            a.className = 'btn1 btn-square btn-primary rounded-circle me-2';
+            a.href = social.url;
+            a.target = '_blank';
+            a.innerHTML = `<i class="${iconMap[social.platform] || 'fab fa-globe'}"></i>`;
+            socialContainer.appendChild(a);
+          });
+        }
+      }
+
+      // Update copyright
+      if (footer.copyrightText) {
+        document.querySelectorAll('[data-site="copyright"]').forEach(el => {
+          el.textContent = footer.copyrightText;
+        });
+      }
+    }
+
+    // Apply SEO settings
+    if (settings.seo) {
+      const { seo } = settings;
+
+      // Update favicon
+      if (seo.faviconUrl) {
+        let favicon = document.querySelector('link[rel="shortcut icon"]');
+        if (favicon) {
+          favicon.href = seo.faviconUrl;
+        }
+      }
+
+      // Update default title if no specific title is set
+      if (seo.defaultTitle && document.title === 'Excella Home') {
+        document.title = seo.defaultTitle;
+      }
+
+      // Update default meta description if no specific description is set
+      if (seo.defaultDescription) {
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc || metaDesc.content === '') {
+          if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = 'description';
+            document.head.appendChild(metaDesc);
+          }
+          metaDesc.content = seo.defaultDescription;
+        }
+      }
+    }
+  }
+
   // Enhanced query to fetch all page content including images
   const query = `*[_type=="page" && slug.current==$slug][0]{
     title,
@@ -391,8 +611,15 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
     }
   }`;
 
+  // Load both page content and site settings
   try {
-    const page = await client.fetch(query, {slug});
+    const [page, siteSettings] = await Promise.all([
+      client.fetch(query, {slug}),
+      loadSiteSettings()
+    ]);
+
+    // Apply site settings first
+    applySiteSettings(siteSettings);
 
     if (page) {
       console.log('Page data loaded:', page);
@@ -463,7 +690,7 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
       console.warn('No page found for slug:', slug);
     }
   } catch (error) {
-    console.error('Error fetching page data:', error);
+    console.error('Error fetching data:', error);
   }
 
   function bindText(selector, data) {

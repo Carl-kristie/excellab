@@ -1,16 +1,43 @@
 # Sanity CMS Integration for Excella U Energy Website
 
 ## Overview
-Your website now integrates with Sanity CMS to manage all content dynamically. This means you can update text, images, and services through the Sanity Studio instead of editing HTML files directly.
+Your website now integrates with Sanity CMS to manage all content dynamically, including site-wide settings for header and footer content. This means you can update text, images, services, navigation, and contact information through the Sanity Studio instead of editing HTML files directly.
 
 ## Setup Instructions
 
 ### 1. Access Sanity Studio
-- Run `cd excellau && npm run dev` in the terminal
-- Open your browser to the URL shown in the terminal (usually http://localhost:3333)
-- This opens the Sanity Studio where you can manage content
+- Your deployed studio: https://excellauenergy.sanity.studio/
+- Local development: Run `cd excellau && npm run dev` then open http://localhost:3333
 
-### 2. Create Your First Page
+### 2. Create Site Settings (IMPORTANT - Do This First!)
+1. In Sanity Studio, click "Site Settings" to create site-wide configuration
+2. Fill in the following sections:
+
+**Basic Info:**
+- Site Title: "Excella U Energy Limited"
+
+**Header Section:**
+- Company Logo: Upload your logo image
+- Company Name: "Excella U Energy"
+- Phone Number: "+2348037091874"
+- Email Address: "info@excellauenergy.com"
+- Navigation Menu: Add menu items (Home, About us, Services, Contact us, etc.)
+
+**Footer Section:**
+- Contact Information:
+  - Email Addresses: Add multiple email addresses
+  - Phone Numbers: Add multiple phone numbers  
+  - Physical Address: Your company address
+- Footer Navigation: Links for footer menu
+- Social Media Links: Add Facebook, LinkedIn, etc.
+- Copyright Text: "Copyright ©2025 All rights reserved"
+
+**SEO Settings:**
+- Default Page Title: "Excella U Energy Limited"
+- Default Meta Description: Your company description
+- Favicon: Upload your favicon image
+
+### 3. Create Your Homepage
 1. In Sanity Studio, click "Page" to create a new page
 2. Fill in the following fields for your homepage:
 
@@ -34,7 +61,7 @@ Your website now integrates with Sanity CMS to manage all content dynamically. T
 **SEO:**
 - SEO Description: Write a description for search engines
 
-### 3. Create Services
+### 4. Create Services
 1. Click "Service" in Sanity Studio
 2. For each service, fill in:
    - Title: Service name
@@ -44,13 +71,100 @@ Your website now integrates with Sanity CMS to manage all content dynamically. T
    - Link Text: "Read More" or custom text
    - Link URL: Link to service detail page
 
-### 4. Link Services to Homepage
+### 5. Link Services to Homepage
 1. Go back to your Homepage in Sanity Studio
 2. In the "Featured Services" section, click "Add item"
 3. Select the services you want to display on the homepage
 4. Save the page
 
+## Content Management Features
+
+### Site-Wide Content (Header & Footer)
+All pages now automatically load content from your Site Settings:
+
+**Header Content:**
+- Company logo and name
+- Contact phone and email
+- Navigation menu
+- All manageable from one place in Sanity
+
+**Footer Content:**
+- Contact information (emails, phones, address)
+- Footer navigation links
+- Social media links
+- Copyright text
+
+### Page-Specific Content
+Each page can have its own:
+- Hero section content
+- About section content
+- Featured services
+- SEO settings
+
+## Adding Sanity to Other Pages
+
+To add header and footer management to other pages:
+
+1. **Add the data attributes to HTML elements:**
+
+```html
+<!-- Header -->
+<img data-site="logo" src="assets/img/logo/excella.png" alt="">
+<span data-site="companyName">Company Name</span>
+<span data-site="phone">Phone Number</span>
+<span data-site="email">Email Address</span>
+<ul data-site="navigation"><!-- Navigation items --></ul>
+
+<!-- Footer -->
+<div data-site="emails"><!-- Email addresses --></div>
+<div data-site="phones"><!-- Phone numbers --></div>
+<p data-site="address"><!-- Address --></p>
+<div data-site="footerNavigation"><!-- Footer links --></div>
+<div data-site="socialMedia"><!-- Social media links --></div>
+<p data-site="copyright"><!-- Copyright text --></p>
+```
+
+2. **Include the site loader script:**
+
+```html
+<script type="module" src="./assets/js/sanity-site-loader.js"></script>
+```
+
+This will automatically load and apply all header and footer content from Sanity.
+
+## Integration Status
+
+✅ **Complete Integration**: All HTML pages now have Sanity CMS integration for site-wide header and footer content:
+
+### Pages with Full Integration:
+- `index.html` - Homepage (page content + site settings)
+- `about.html` - About page (site settings)
+- `services.html` - Services page (site settings)  
+- `contact.html` - Contact page (site settings)
+- `oil.html` - Oil & Gas service page (site settings)
+- `oilfield.html` - Oil Field Engineering page (site settings)
+- `maritime.html` - Maritime services page (site settings)
+- `international.html` - International trading page (site settings)
+- `exploration.html` - Exploration page (site settings)
+- `commodity.html` - Commodity trading page (site settings)
+- `hse.html` - Health, Safety & Environment page (site settings)
+- `team.html` + `team1.html` through `team8.html` - Team pages (site settings)
+
+All pages will automatically load and display:
+- Company logo and name from Sanity
+- Header phone number and email  
+- Navigation menu items
+- Footer contact information (emails, phones, address)
+- Footer navigation links
+- Copyright text
+- Social media links (when configured)
+
 ## Content Fields Available
+
+### Site Settings Schema
+- **header**: Logo, company name, contact info, navigation
+- **footer**: Contact details, navigation, social media, copyright
+- **seo**: Default title, description, favicon
 
 ### Page Schema
 - **title**: Admin title for identification
@@ -78,99 +192,67 @@ Your website now integrates with Sanity CMS to manage all content dynamically. T
 
 ## How It Works
 
-### Data Attributes
-Your HTML uses special data attributes that tell the JavaScript which Sanity fields to use:
+### Site-Wide Loading
+When any page loads:
+1. JavaScript fetches site settings from Sanity
+2. Header and footer content is automatically populated
+3. Navigation, contact info, and social links are updated
+4. SEO settings are applied
 
-- `data-sanity-field="fieldName"`: Populates text content
-- `data-sanity-pt="fieldName"`: Populates rich text content
-- `data-sanity-img="fieldName"`: Populates image sources
-
-### Dynamic Content Loading
-When someone visits your website:
-1. JavaScript fetches content from Sanity based on the page slug
-2. Content is dynamically inserted into HTML elements
-3. Images are loaded and optimized
-4. Services are rendered from the template
+### Page-Specific Loading
+For pages with specific content (like homepage):
+1. Page-specific content is fetched based on the page slug
+2. Dynamic content is inserted into designated elements
+3. Services are rendered from templates
 
 ## Updating Content
 
-### Text Changes
+### Site-Wide Changes (Header/Footer)
 1. Open Sanity Studio
-2. Navigate to the Page you want to edit
+2. Navigate to "Site Settings"
+3. Update any header or footer information
+4. Click "Publish"
+5. Changes appear on ALL pages immediately
+
+### Page-Specific Changes
+1. Open Sanity Studio
+2. Navigate to the specific Page
 3. Update the relevant fields
 4. Click "Publish"
-5. Changes appear on your website immediately
+5. Changes appear on that specific page
 
 ### Adding New Services
 1. Create a new Service in Sanity Studio
-2. Fill in all the fields
-3. Publish the service
-4. Go to your Page and add the service to the "Featured Services" list
-5. Publish the page
-
-### Image Updates
-1. In Sanity Studio, click on the image field
-2. Upload a new image or select from existing ones
-3. Sanity automatically optimizes and serves the image
-4. Publish your changes
+2. Fill in all the fields and publish
+3. Go to your Page and add the service to "Featured Services"
+4. Publish the page
 
 ## File Structure
 ```
 excellau/
-├── sanity.config.js       # Sanity configuration
+├── sanity.config.js           # Sanity configuration
 ├── schemaTypes/
-│   ├── index.js          # Exports all schemas
-│   ├── page.js           # Page content schema
-│   └── service.js        # Service schema
+│   ├── index.js              # Exports all schemas
+│   ├── page.js               # Page content schema
+│   ├── service.js            # Service schema
+│   └── siteSettings.js       # Site-wide settings schema
 └── schemas/
-    └── schema.js         # Legacy schema file
+    └── schema.js             # Legacy schema file
+
+assets/js/
+├── sanity-site-loader.js     # Reusable site settings loader
+└── site-settings.js          # Deprecated - functionality moved to pages
 ```
-
-## Troubleshooting
-
-### Common Issues
-
-**1. Content not loading:**
-- Check that your page slug matches the slug in Sanity
-- Ensure the page is published in Sanity Studio
-- Check browser console for JavaScript errors
-
-**2. Images not showing:**
-- Verify images are uploaded and published in Sanity
-- Check that image fields are not empty
-- Ensure proper data attributes in HTML
-
-**3. Services not appearing:**
-- Create at least one service in Sanity Studio
-- Link services to your page in the "Featured Services" field
-- Publish both services and the page
-
-### Development Commands
-```bash
-# Start Sanity Studio
-cd excellau
-npm run dev
-
-# Deploy Sanity Studio (when ready)
-npm run build
-npm run deploy
-```
-
-## Next Steps
-
-1. **Create content in Sanity Studio** following the setup instructions above
-2. **Test your website** to ensure content loads properly
-3. **Add more services** as needed
-4. **Customize styling** in the CSS files if needed
-5. **Deploy Sanity Studio** when ready for production
 
 ## Benefits of This Setup
 
+- ✅ **Centralized Management**: Update header/footer content once, affects all pages
 - ✅ **Content Management**: Easy content updates without touching code
 - ✅ **Image Optimization**: Automatic image optimization and CDN delivery
 - ✅ **SEO Friendly**: Proper meta tags and structured content
 - ✅ **Performance**: Fast loading with CDN and caching
 - ✅ **Scalability**: Easy to add new content types and fields
+- ✅ **Consistency**: Ensures consistent branding across all pages
 - ✅ **Version Control**: Content versioning and revision history in Sanity
 
-Your website is now powered by a professional CMS that makes content management simple and efficient!
+Your website is now powered by a professional CMS with centralized site management!

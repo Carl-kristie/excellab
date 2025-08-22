@@ -25,8 +25,9 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sanity-integration.css">
 </head>
-<body>
+<body data-slug="about">
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -49,8 +50,8 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>     
-                                        <li><i class="fas fa-phone"></i>+2348037091874</li>
-                                        <li><i class="far fa-envelope"></i>info@excellauenergy.com</li>
+                                        <li data-site="phone"><i class="fas fa-phone"></i>+2348037091874</li>
+                                        <li data-site="email"><i class="far fa-envelope"></i>info@excellauenergy.com</li>
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
@@ -67,7 +68,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/excella.png" alt="">Excella <br> U <br> Energy</a>
+                                    <a href="index.html" data-site="logo-link"><img src="assets/img/logo/excella.png" alt="" data-site="logo"><span data-site="companyName">Excella <br> U <br> Energy</span></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-8 right">
@@ -75,7 +76,7 @@
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
                                         <nav> 
-                                            <ul id="navigation">                                                                                          
+                                            <ul id="navigation" data-site="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
                                                 <li class="active"><a href="about.html">About</a></li>
                                                 <li><a href="services.html">Services</a></li>
@@ -216,11 +217,13 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5 class="text-white mb-4">Navigation</h5>
-                <a class="btn1 btn-link" href="/index.html">Home</a>
-                <a class="btn1 btn-link" href="/team.html">Our Team</a>
-                <a class="btn1 btn-link" href="/services.html">Our Services</a>
-                <a class="btn1 btn-link" href="/about.html">About Us</a>
-                <a class="btn1 btn-link" href="/contact.html">Contact Us</a>
+                <div data-site="footerNavigation">
+                    <a class="btn1 btn-link" href="/index.html">Home</a>
+                    <a class="btn1 btn-link" href="/team.html">Our Team</a>
+                    <a class="btn1 btn-link" href="/services.html">Our Services</a>
+                    <a class="btn1 btn-link" href="/about.html">About Us</a>
+                    <a class="btn1 btn-link" href="/contact.html">Contact Us</a>
+                </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 
@@ -238,7 +241,7 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-xl-9 col-lg-8">
                         <div class="footer-copy-right"></p>
-                            <p>Copyright ©2025 All rights reserved</p>
+                            <p data-site="copyright">Copyright ©2025 All rights reserved</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4">
@@ -308,6 +311,8 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
+<!-- Sanity CMS Integration -->
+<script type="module" src="./assets/js/sanity-site-loader.js"></script>
 
 </body>
 </html>
