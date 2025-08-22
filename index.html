@@ -25,7 +25,6 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/sanity-integration.css">
 </head>
 <body data-slug="home">
     <!-- ? Preloader Start -->
@@ -176,6 +175,7 @@
     <template id="service-card-tpl">
       <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
         <div class="service-item">
+          <img class="img-fluid image-service" data-field="image" src="" alt="">
           <div class="service-img">
             <img class="img-fluid" data-field="image" src="" alt="">
           </div>
@@ -485,11 +485,31 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
     items.forEach((service, i) => {
       const node = tpl.content.cloneNode(true);
       
-      // Set service image
+      // Set service image with proper styling
       node.querySelectorAll("[data-field='image']").forEach(img => {
         if (service.imageUrl) {
           img.src = service.imageUrl;
           img.alt = service.title || "Service image";
+          
+          // Different styling for main service image vs icon image
+          if (img.classList.contains('image-service')) {
+            // This is the main background image - let original CSS handle sizing
+            img.style.objectFit = 'cover';
+            img.style.objectPosition = 'center';
+            img.style.width = '100%';
+            // Don't set height - let the .image-service CSS rule handle it
+          } else {
+            // This is the small circular icon in service-img container
+            img.style.objectFit = 'cover';
+            img.style.objectPosition = 'center';
+            img.style.width = '100%';
+            img.style.height = '100%';
+          }
+          
+          // Ensure the image has proper classes for responsive behavior
+          if (!img.classList.contains('img-fluid')) {
+            img.classList.add('img-fluid');
+          }
         }
       });
       
