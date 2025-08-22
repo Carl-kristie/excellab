@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sanity Connection Test</title>
+</head>
+<body>
+    <h1>Sanity Connection Test</h1>
+    <div id="status">Testing connection...</div>
+    <div id="results"></div>
+
+    <script type="module">
+        import {createClient} from "https://esm.sh/@sanity/client@6";
+
+        const client = createClient({
+            projectId: "r74j65mx",
+            dataset: "production",
+            apiVersion: "2025-08-22",
+            useCdn: true,
+            perspective: "published"
+        });
+
+        const statusDiv = document.getElementById('status');
+        const resultsDiv = document.getElementById('results');
+
+        async function testConnection() {
+            try {
+                statusDiv.innerHTML = "✅ Sanity client created successfully";
+                
+                // Test basic connection
+                const healthCheck = await client.fetch('*[_type == "page"]');
+                resultsDiv.innerHTML += `<p><strong>Pages found:</strong> ${healthCheck.length}</p>`;
+                
+                if (healthCheck.length > 0) {
+                    resultsDiv.innerHTML += `<pre>${JSON.stringify(healthCheck, null, 2)}</pre>`;
+                } else {
+                    resultsDiv.innerHTML += `<p style="color: orange;">⚠️ No pages found in Sanity. You need to create a page with slug "home"</p>`;
+                }
+
+                // Test services
+                const services = await client.fetch('*[_type == "service"]');
+                resultsDiv.innerHTML += `<p><strong>Services found:</strong> ${services.length}</p>`;
+                
+                if (services.length > 0) {
+                    resultsDiv.innerHTML += `<pre>${JSON.stringify(services, null, 2)}</pre>`;
+                } else {
+                    resultsDiv.innerHTML += `<p style="color: orange;">⚠️ No services found in Sanity. You need to create some services</p>`;
+                }
+
+            } catch (error) {
+                statusDiv.innerHTML = `❌ Error: ${error.message}`;
+                resultsDiv.innerHTML = `<pre style="color: red;">${error.stack}</pre>`;
+            }
+        }
+
+        testConnection();
+    </script>
+</body>
+</html>
