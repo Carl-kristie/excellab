@@ -25,8 +25,9 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/style.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/sanity-integration.css">
 </head>
-<body>
+<body data-slug="home">
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -110,9 +111,9 @@
                         <div class="row">
                             <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9 cap-container">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay="0.2s">Welcome to <span>Excella U Energy Limited</span></h1>
-                                    <p data-animation="fadeInLeft" data-delay="0.4s">Where Vision Meets Innovation in Oil, Gas, and Maritime Solutions</p>
-                                    <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Learn More <i class="ti-arrow-right"></i></a>
+                                    <h1 data-sanity-field="heroTitle" data-animation="fadeInLeft" data-delay="0.2s"></span></h1>
+                                    <p data-sanity-field="heroSubtitle" data-animation="fadeInLeft" data-delay="0.4s">Where Vision Meets Innovation in Oil, Gas, and Maritime Solutions</p>
+                                    <a href="#" class="btn hero-btn" data-sanity-field="heroCta" data-animation="fadeInLeft" data-delay="0.7s">Learn More <i class="ti-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -143,17 +144,17 @@
                         <div class="about-caption mb-50">
                             <!-- Section Tittle -->
                             <div class="section-tittle mb-35">
-                                <span class="element">About Us</span>
-                                <h2>Comprehensive Solutions, Tailored for Every Scale</h2>
+                                <span data-sanity-field="aboutTitle" class="element">About Us</span>
+                                <h2 data-sanity-field="aboutHeading">Comprehensive Solutions, Tailored for Every Scale</h2>
                             </div>
-                            <p>Your Trailblazing Partner in Energy Solutions. We're a forward-thinking, indigenous company committed to excellence in the oil, gas, and maritime sectors. Our journey is defined by integrity, innovation, and a relentless pursuit of delivering top-tier services tailored to meet diverse needs. Discover how we're redefining industry standards, one solution at a time.</p>
+                            <p data-sanity-pt="aboutBody">Your Trailblazing Partner in Energy Solutions. We're a forward-thinking, indigenous company committed to excellence in the oil, gas, and maritime sectors. Our journey is defined by integrity, innovation, and a relentless pursuit of delivering top-tier services tailored to meet diverse needs. Discover how we're redefining industry standards, one solution at a time.</p>
                         </div>
                         
                     </div>
                     <div class="col-xl-5 col-lg-6 col-md-9 offset-md-1 offset-sm-1">
                         <div class="about-right-cap">
                             <div class="about-right-img">
-                                <img src="assets/img/gallery/about1.png" alt="">
+                                <img data-sanity-img="aboutImage" src="assets/img/gallery/about1.png" alt="">
                             </div>
                           
                         </div>
@@ -163,164 +164,46 @@
         </section>
         <!-- About  End-->
 
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
-                    <h1 class="display-5 mb-4">We Provide Best Industrial Services</h1>
-                </div>
-                <div class="row gy-5 gx-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/hero1 (4).jpg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/hero1 (4).jpg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">Oil Field Engineering</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Our precision-driven solutions optimize infrastructure, ensuring efficient oil exploration, pipeline maintenance, and facility management. Explore our expertise in enhancing oil field operations for sustainable and reliable energy production
+<div class="container-xxl py-5" id="home-services">
+  <div class="container">
+    <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <p class="fw-medium text-uppercase text-primary mb-2" data-sanity-field="servicesTitle">Our Services</p>
+      <h1 class="display-5 mb-4" data-sanity-field="servicesHeading">We Provide Best Industrial Services</h1>
+    </div>
 
-                                    </p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="oilfield.html">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/maritime.jpeg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/maritime.jpeg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">Maritime and Logistics Services</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Navigating the seas of efficiency, our comprehensive solutions cover vessel handling, logistics, and support services. Explore how we streamline maritime operations for seamless global connectivity and trade.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="maritime.html">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/international-transformed.jpeg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/international-transformed.jpeg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">International Trading and Consultancy</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0"> Bridging global markets, our expertise spans Oil, Gas, Solid Minerals, and Maritime industries. Discover how we facilitate seamless procurement and provide expert consultation for international ventures.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="international.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gy-5 gx-4">
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/exploration-transformed.jpeg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/exploration-transformed.jpeg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">Exploration & Refining of Petroleum</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Pioneering advancements in oil exploration and refining, we delve into cutting-edge techniques. Explore our commitment to unlocking potential reserves and refining processes, driving innovation in the energy landscape.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="exploration.html">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/commodity-transformed.jpeg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/commodity-transformed.jpeg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">COMMODITY TRADING, PROCUREMENT AND MINIG OF SOLID MINERALS</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Navigating global markets, we specialize in trading oil, gas, minerals, and maritime commodities. Explore our expertise in procuring and trading valuable resources across international landscapes.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="commodity.html">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/hero1 (4).jpg" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/hero1 (4).jpg" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">Oil & Gas Exploration and Production</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Where innovation meets extraction. Discover our expertise in securing reserves, exploration, and efficient production processes. Explore how we drive forward the energy landscape with sustainable solutions.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="oil.html">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gy-5 gx-4">
-                   
-                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item">
-                            <img class="img-fluid image-service" src="/assets/img/hse.png" alt="">
-                            <div class="service-img">
-                                <img class="img-fluid" src="/assets/img/hse.png" alt="">
-                            </div>
-                            <div class="service-detail">
-                                <div class="service-title">
-                                    <hr class="w-25">
-                                    <h3 class="mb-0 bold">HEALTH, SAFETY, AND ENVIRONMENT</h3>
-                                    <hr class="w-25">
-                                </div>
-                                <div class="service-text">
-                                    <p class="text-white mb-0">Championing a Safer Future, Upholding Unparalleled Health Standards, and Embracing Environmental Stewardship for a Sustainable World.</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-light readmore-btn" href="hse.html">Read More</a>
-                        </div>
-                    </div>
-                    
-                </div>
+    <div class="row gy-5 gx-4" id="services-list"></div>
+
+    <template id="service-card-tpl">
+      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="service-item">
+          <img class="img-fluid image-service" data-field="image" src="" alt="">
+          <div class="service-img">
+            <img class="img-fluid" data-field="image" src="" alt="">
+          </div>
+          <div class="service-detail">
+            <div class="service-title">
+              <hr class="w-25">
+              <h3 class="mb-0 bold" data-field="title"></h3>
+              <hr class="w-25">
             </div>
+            <div class="service-text">
+              <p class="text-white mb-0" data-field="description"></p>
+            </div>
+          </div>
+          <a class="btn btn-light readmore-btn" data-field="link" href="#">Read More</a>
         </div>
+      </div>
+    </template>
+  </div>
+</div>
+
 
         <div class="form-container">
             <div class="form-wrapper">
                 <div class="row ">
                     <div class="col-xl-12">
                         <div class="section-tittle section-tittle2 mb-30">
-                            <h2>Drop your message</h2>
+                            <h2 data-sanity-field="contactTitle">Drop your message</h2>
                         </div>
                     </div>
                 </div>
@@ -472,6 +355,197 @@ Plot 963 R.I Uzoma street Wuye Abuja</p>
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+<script type="module">
+  import {createClient} from "https://esm.sh/@sanity/client@6";
+  import {toHTML} from "https://esm.sh/@portabletext/to-html@2";
+
+  const client = createClient({
+    projectId: "r74j65mx",
+    dataset: "production",
+    apiVersion: "2025-08-22",
+    useCdn: true,
+    perspective: "published"
+  });
+
+  const slug = document.body.getAttribute("data-slug") || inferSlugFromPath();
+
+  // Enhanced query to fetch all page content including images
+  const query = `*[_type=="page" && slug.current==$slug][0]{
+    title,
+    heroTitle, 
+    heroSubtitle, 
+    heroCtaText, 
+    heroCtaUrl,
+    "heroImageUrl": heroImage.asset->url,
+    aboutTitle, 
+    aboutHeading, 
+    aboutBody, 
+    "aboutImageUrl": aboutImage.asset->url,
+    seoDescription,
+    services[]->{
+      title, 
+      description,
+      "imageUrl": image.asset->url,
+      linkText, 
+      linkUrl,
+      slug
+    }
+  }`;
+
+  try {
+    const page = await client.fetch(query, {slug});
+
+    if (page) {
+      console.log('Page data loaded:', page);
+      
+      // Update page title
+      if (page.title) {
+        document.title = page.title;
+      }
+
+      // Update meta description
+      if (page.seoDescription) {
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+          metaDesc = document.createElement('meta');
+          metaDesc.name = 'description';
+          document.head.appendChild(metaDesc);
+        }
+        metaDesc.content = page.seoDescription;
+      }
+
+      // Simple text fields
+      bindText("[data-sanity-field]", page);
+
+      // Images
+      document.querySelectorAll("[data-sanity-img]").forEach(el => {
+        const key = el.getAttribute("data-sanity-img");
+        if (key === "aboutImage" && page.aboutImageUrl) {
+          el.src = page.aboutImageUrl;
+          el.alt = page.aboutTitle || "About us image";
+        }
+      });
+
+      // Portable Text blocks (rich text content)
+      document.querySelectorAll("[data-sanity-pt]").forEach(el => {
+        const key = el.getAttribute("data-sanity-pt");
+        if (Array.isArray(page[key])) {
+          el.innerHTML = toHTML(page[key]);
+        }
+      });
+
+      // Hero CTA button
+      document.querySelectorAll("[data-sanity-field='heroCta']").forEach(el => {
+        if (page.heroCtaText) {
+          // Update button text while preserving the icon
+          const icon = el.querySelector('i');
+          el.innerHTML = page.heroCtaText;
+          if (icon) el.appendChild(icon);
+        }
+        if (page.heroCtaUrl) {
+          el.href = page.heroCtaUrl;
+        }
+      });
+
+      // Hero background image
+      if (page.heroImageUrl) {
+        const sliderArea = document.querySelector('.slider-area');
+        if (sliderArea) {
+          sliderArea.style.backgroundImage = `url(${page.heroImageUrl})`;
+          sliderArea.style.backgroundSize = 'cover';
+          sliderArea.style.backgroundPosition = 'center';
+        }
+      }
+
+      // Services list
+      renderServices(page.services || []);
+      
+    } else {
+      console.warn('No page found for slug:', slug);
+    }
+  } catch (error) {
+    console.error('Error fetching page data:', error);
+  }
+
+  function bindText(selector, data) {
+    document.querySelectorAll(selector).forEach(el => {
+      const key = el.getAttribute("data-sanity-field");
+      if (data[key]) {
+        el.textContent = data[key];
+      }
+    });
+  }
+
+  function renderServices(items) {
+    const list = document.getElementById("services-list");
+    const tpl = document.getElementById("service-card-tpl");
+    if (!list || !tpl) return;
+    
+    list.innerHTML = "";
+    
+    items.forEach((service, i) => {
+      const node = tpl.content.cloneNode(true);
+      
+      // Set service image
+      node.querySelectorAll("[data-field='image']").forEach(img => {
+        if (service.imageUrl) {
+          img.src = service.imageUrl;
+          img.alt = service.title || "Service image";
+        }
+      });
+      
+      // Set service title
+      const titleEl = node.querySelector("[data-field='title']");
+      if (titleEl && service.title) {
+        titleEl.textContent = service.title;
+      }
+      
+      // Set service description
+      const descEl = node.querySelector("[data-field='description']");
+      if (descEl && service.description) {
+        descEl.textContent = service.description;
+      }
+      
+      // Set service link
+      const linkEl = node.querySelector("[data-field='link']");
+      if (linkEl) {
+        linkEl.textContent = service.linkText || "Read More";
+        if (service.linkUrl) {
+          linkEl.href = service.linkUrl;
+        } else if (service.slug?.current) {
+          // Link to service detail page
+          linkEl.href = `/services/${service.slug.current}.html`;
+        }
+      }
+      
+      // Stagger animation delays
+      const col = node.firstElementChild;
+      if (col) {
+        col.setAttribute("data-wow-delay", `${0.1 + (i % 3) * 0.2}s`);
+      }
+      
+      list.appendChild(node);
+    });
+  }
+
+  function inferSlugFromPath() {
+    const path = location.pathname.replace(/\/+$/, "");
+    if (!path || path === "/") return "home";
+    const name = path.split("/").pop();
+    return name.replace(/\.html?$/i, "") || "home";
+  }
+
+  // Add some loading state management
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add a loading class that can be styled
+    document.body.classList.add('content-loading');
+    
+    // Remove loading class after content is loaded
+    setTimeout(() => {
+      document.body.classList.remove('content-loading');
+    }, 1000);
+  });
+</script>
 
     
     </body>
